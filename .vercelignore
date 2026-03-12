@@ -11,3 +11,14 @@ __pycache__
 .env.*.local
 venv
 .venv
+requirements.txt
+api/
+.github/
+
+__pycache__
+*.pyc
+.env
+.env.local
+.env.*.local
+venv
+.venv
