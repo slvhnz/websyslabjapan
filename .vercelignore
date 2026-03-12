@@ -1,0 +1,13 @@
+node_modules
+.git
+.gitignore
+README.md
+test_*.py
+check_env.py
+__pycache__
+*.pyc
+.env
+.env.local
+.env.*.local
+venv
+.venv
