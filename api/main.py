@@ -1,4 +1,5 @@
 import os
+import sys
 import uuid
 import secrets
 from datetime import timedelta
@@ -17,13 +18,18 @@ from sqlalchemy.orm import Session
 from supabase import create_client, Client
 from typing import Optional
 
+# Ensure the project root is in sys.path for proper imports (fixes uvicorn reload issues)
+project_root = Path(__file__).resolve().parent.parent
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 # Load .env.local from project root
-env_path = Path(__file__).resolve().parent.parent / ".env.local"
+env_path = project_root / ".env.local"
 load_dotenv(dotenv_path=env_path)              
 
-from . import crud, models, schemas, security
-from .database import SessionLocal, engine
-from .settings import (
+from api import crud, models, schemas, security
+from api.database import SessionLocal, engine
+from api.settings import (
     ACCESS_TOKEN_EXPIRE_MINUTES,
     ALGORITHM,
     SECRET_KEY,

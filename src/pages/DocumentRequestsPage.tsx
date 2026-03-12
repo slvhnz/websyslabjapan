@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from '../pagestyles/DocumentRequestsPage.module.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
 
 interface TrackedRequest {
   requester_name: string;

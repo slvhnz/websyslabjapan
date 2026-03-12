@@ -22,7 +22,7 @@ interface PostSummary {
 }
 
 // Get the API base URL from Vite environment variables (configured in Vercel)
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app';
 
 
 const LandingPage = () => {

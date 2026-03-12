@@ -4,7 +4,7 @@ import styles from '../pagestyles/ApiTestPage.module.css'; // This uses the same
 
 // Setup Axios instance
 const api = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: 'https://websyslabjapanb.vercel.app',
 });
 
 const ApiTestPage = () => {
@@ -200,7 +200,7 @@ const ApiTestPage = () => {
   const fetchAllRequests = async () => {
     try {
       // Bypassed auth for testing
-      const response = await axios.get('http://localhost:8000/admin/requests/');
+      const response = await axios.get('https://websyslabjapanb.vercel.app/admin/requests/');
       handleApiResponse(response.data);
     } catch (error) { handleError(error); }
   };

@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import styles from '../pagestyles/SignInPage.module.css';
 import logo from '../assets/skonnect-logo.png';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
 
 const SignInPage = () => {
   const [username, setUsername] = useState('');
