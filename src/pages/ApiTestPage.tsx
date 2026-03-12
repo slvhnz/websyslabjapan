@@ -4,7 +4,7 @@ import styles from '../pagestyles/ApiTestPage.module.css'; // This uses the same
 
 // Setup Axios instance
 const api = axios.create({
-  baseURL: 'https://websyslabjapanb.vercel.app',
+  baseURL: 'http://localhost:8000',
 });
 
 const ApiTestPage = () => {

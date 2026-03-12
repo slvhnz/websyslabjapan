@@ -4,7 +4,7 @@ import PostModal from '../components/PostModal'; // Import the reusable modal
 
 import Card from 'react-bootstrap/Card';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
 
 interface Post {
   id: number;

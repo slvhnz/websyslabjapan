@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import styles from '../../pagestyles/AdminRequestDetails.module.css'; // We'll create this file next
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
 
 interface DocumentRequest {
   id: number;

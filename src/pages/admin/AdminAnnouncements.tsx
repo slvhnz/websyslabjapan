@@ -6,7 +6,7 @@ import Modal from '../../components/Modal';
 import PostForm from '../../components/PostForm';
 import AdminPostPreview from '../../components/AdminPostPreview';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
 
 interface Media {
   url: string;

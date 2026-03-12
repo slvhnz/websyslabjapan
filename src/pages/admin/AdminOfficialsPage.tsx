@@ -3,7 +3,7 @@ import axios from 'axios';
 import styles from '../../pagestyles/AdminPage.module.css';
 import OfficialFormModal from '../../components/OfficialFormModal';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://websyslabjapanb.vercel.app'; // Fallback for production
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
 
 // Define the Official interface with an optional ID
 interface Official {
