@@ -3,7 +3,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import styles from '../pagestyles/SignInPage.module.css';
 import logo from '../assets/skonnect-logo.png';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000'; // Fallback for local dev
 
 const SignInPage = () => {
   const [username, setUsername] = useState('');
@@ -21,8 +21,8 @@ const SignInPage = () => {
 
     try {
       // *** MODIFIED: Use API_BASE_URL ***
-const response = await fetch(`${API_BASE_URL}/token/`, {
-          method: 'POST',
+      const response = await fetch(`${API_BASE_URL}/token`, {
+        method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: details,
       });
