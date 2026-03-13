@@ -1,7 +1,5 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "./dist",
-  "installCommand": "npm install",
+  "version": 2,
   "builds": [
     {
       "src": "api/main.py",
@@ -9,13 +7,14 @@
     },
     {
       "src": "package.json",
-      "use": "@vercel/static-build"
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
     }
   ],
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "api/main.py"
+      "destination": "/api/main.py"
     },
     {
       "source": "/(.*)",
