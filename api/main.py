@@ -52,7 +52,7 @@ app = FastAPI(title="sKonnect API")
 # --- CORS Middleware Setup ---
 origins = [
     "http://localhost:5173",
-    "https://skonnectmalitbog.vercel.app",  # Add your frontend URL here
+    "https://skconnectmalitbog.vercel.app",  # Add your frontend URL here
 ]
                               
 app.add_middleware(
