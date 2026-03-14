@@ -119,7 +119,7 @@ def get_current_active_admin(current_user: schemas.User = Depends(get_current_us
 
 # --- Authentication Endpoints ---
 
-@app.post("/token", response_model=schemas.Token, tags=["Authentication"])
+@app.post("/api/token", response_model=schemas.Token, tags=["Authentication"])
 def login_for_access_token(
     form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)
 ):
