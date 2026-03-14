@@ -21,7 +21,7 @@ const SignInPage = () => {
 
     try {
       // *** MODIFIED: Use API_BASE_URL ***
-      const response = await fetch(`${API_BASE_URL}/token/`, {
+      const response = await fetch(`${API_BASE_URL}/token`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: details,
